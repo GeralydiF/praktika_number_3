@@ -1,0 +1,14 @@
+﻿<Page x:Class="praktika_number_3.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika_number_3"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="1100"
+      Title="Page1">
+
+    <Grid Background="White">
+        
+    </Grid>
+</Page>

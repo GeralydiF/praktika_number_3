@@ -1,0 +1,194 @@
+﻿<Window x:Class="praktika_number_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:praktika_number_3"
+        mc:Ignorable="d"
+        Title="Поволяев Д.А 2ПКС-220" Height="606" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+
+    <Grid>
+        <TabControl Height="520" Width="1120" Margin="25,30,25,10">
+            <TabItem Header="containes">
+                <Grid>
+                    <Label Content="описание метода " Margin="882,29,108,426"  />
+                    <Border Background="LightGray" Margin="775,54,0,0" Height="75" HorizontalAlignment="Left" VerticalAlignment="Top" Width="331">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.383"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="1.606"/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                        <ScrollViewer Margin="-32,35,-86,20" VerticalScrollBarVisibility="Auto">
+                            <StackPanel Orientation="Vertical" Height="99" Width="379"/>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Margin="784,71,10,389" ><Run Text="Возвращает значение, указывающее,"/><LineBreak/><Run Text="встречается ли указанная подстрока внутри этой строки."/></TextBlock>
+
+
+
+                    <Button x:Name="contains" Content="Получить результат"  Click="contains_Click"  Height="40" Width="300" Margin="33,275,781,177"/>
+                    <TextBox Name="contains_first_string"  Width="260" Margin="33,71,821,364"/>
+                    <TextBox Name="contains_second_string"  Width="260" Margin="33,175,821,259"/>
+                    <TextBox Name="contains_result" IsReadOnly="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="120" Margin="33,372,961,90" RenderTransformOrigin="0.477,0.255"/>
+
+                    <Label Content="Исходная строка"  Margin="55,26,931,433" />
+                    <Label Content="Подстрока/символ"  Margin="55,133,934,319" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="concat">
+                <Grid>
+                    <Button x:Name="concat" Content="Получить результат"  Click="concat_Click"  Height="40" Width="300" Margin="37,277,777,175"/>
+                    <Label Content="итоговая строка" Margin="133,339,873,127"/>
+                    <Label Content="введите первую строку" Margin="114,58,854,401"/>
+                    <Label Content="введите вторую строку" Margin="108,158,848,299"/>
+                    <Label Content="описание метода" Margin="905,60,84,403"/>
+
+                    <TextBox Name="concat_first_string"  Margin="37,105,778,339"/>
+                    <TextBox Name="concat_second_string"  Margin="38,198,777,246"/>
+                    <TextBox Name="concat_result" IsReadOnly="True"  Margin="38,384,777,60"/>
+
+                    <TextBlock Background="LightGray" Margin="871,105,10,339">   конкатенация - объединение строк</TextBlock>
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="EndsWith">
+                <Grid>
+                    <Button x:Name="endswith" Content="получить результат" Click="endswith_Click" Margin="47,276,789,170"/>
+
+                    <Label Content="исходная строка" Margin="130,45,872,414"/>
+                    <Label Content="Подстрока или символ" Margin="113,159,855,297"/>
+                    <Label Content="результат" Margin="147,327,889,132"/>
+
+                    <TextBox Name="endswith_first_string"  Margin="51,95,785,351"/>
+                    <TextBox Name="endswith_second_string" Margin="51,200,785,246"/>
+                    <TextBox Name="endswith_result" IsReadOnly="True"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="51,365,785,81"/>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="indexof">
+                <Grid>
+                    <Button x:Name="index" Content="Получить результат" Click="index_Click"  Height="40" Width="300" Margin="43,282,771,170" />
+
+                    <Label Content="Исходная строка" Margin="25,26,599,295" />
+                    <Label Content="Подстрока/символ"  Margin="325,26,299,295" />
+
+                    <TextBox Name="index_first_string"  Height="120" Width="260" Margin="25,82,829,290"/>
+                    <TextBox Name="index_second_string"  Height="120" Width="260" Margin="325,82,529,290"/>
+                    <TextBox Name="index_result" IsReadOnly="True" Height="80" Width="300" Margin="43,360,771,52"/>
+
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="insert">
+                <Grid>
+                    <Button x:Name="insert" Content="Получить результат" Click="insert_Click"  Height="40" Width="300" Margin="25,261,789,191" />
+
+                    <Label Content="Первая строка"  Margin="25,26,599,295" />
+                    <Label Content="Вторая строка" Margin="614,20,10,301" />
+                    <Label Content="Индекс"  Margin="312,26,312,307" />
+
+                    <TextBox Name="insert_first_string"  Height="50" Width="260" Margin="25,87,829,355"/>
+                    <TextBox Name="insert_second_string" Width="260" Margin="648,87,206,355"/>
+                    <TextBox Name="insert_index"  VerticalContentAlignment="Center" Width="260" Margin="315,87,539,355"/>
+                    <TextBox Name="insert_result" IsReadOnly="True"  Height="50" Width="300" Margin="25,356,789,86"/>
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="join">
+                <Grid>
+                    <Button x:Name="join" Content="Получить результат"  Click="join_Click"  Height="40" Width="300" Margin="10,274,804,178" />
+
+                    <Label Content="Исходный массив строк"  Margin="25,26,599,295" />
+                    <Label Content="Разделитель"  Margin="377,26,247,295" />
+
+                    <TextBox Name="join_first_string" Width="260" Margin="25,97,829,326"/>
+                    <TextBox Name="join_second_string" Width="260" Margin="377,97,477,326"/>
+                    <TextBox Name="join_result" IsReadOnly="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="300" Margin="10,342,804,91"/>
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="replace">
+                <Grid>
+                    <Button x:Name="replace" Content="Получить результат" Click="replace_Click"  Height="40" Width="300" Margin="37,296,777,156" />
+
+                    <Label Content="Исходная строка"  Margin="37,31,587,290" />
+                    <Label Content="Заменяемая подстрока"  Margin="396,31,228,302" />
+                    <Label Content="Заменяющая строка"  Margin="727,31,-103,302" />
+
+                    <TextBox Name="replace_string" Margin="37,150,777,302"/>
+                    <TextBox Name="replace_old_string"  Height="40" Width="260" Margin="396,150,458,302"/>
+                    <TextBox Name="replace_new_string" Width="260" Margin="727,150,127,302"/>
+                    <TextBox Name="replace_result" IsReadOnly="True" Width="300" Margin="37,375,777,77"/>
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="split">
+                <Grid>
+                    <Button x:Name="split" Content="Получить результат"  Click="split_Click"  Height="40" Width="300" Margin="25,275,789,177" />
+
+                    <Label Content="Исходная строка" Margin="25,99,599,222" />
+                    <Label Content="Разделитель"  Margin="350,99,274,222" />
+
+                    <TextBox Name="split_first_string" Width="260" Margin="25,157,829,295"/>
+                    <TextBox Name="split_second_string" Width="260" Margin="375,157,479,295"/>
+                    <TextBox Name="split_result" IsReadOnly="True" Width="300" Margin="25,365,789,87"/>
+
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="substring">
+                <Grid>
+                    <Button x:Name="substring" Content="Получить результат"  Click="substring_Click"  Height="40" Width="300" Margin="60,277,754,175" />
+
+                    <Label Content="Исходная строка"  Margin="60,27,564,294" />
+                    <Label Content="Начальный индекс"  HorizontalContentAlignment="Right" Margin="80,32,584,299" />
+                    <Label Content="Длина подстроки"  HorizontalContentAlignment="Right" Margin="386,33,277,299" />
+
+                    <TextBox Name="substring_string"  Height="50" Margin="60,143,754,299"/>
+                    <TextBox Name="substring_start" Width="260" Margin="401,143,453,299"/>
+                    <TextBox Name="substring_length" Width="260" Margin="736,143,118,294"/>
+                    <TextBox Name="substring_result"  Height="50" Width="300" Margin="60,366,754,76"/>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="ToUper ToLower">
+                <Grid>
+                    <Button x:Name="toul" Content="Получить результат"  Click="toul_Click"  Height="40" Width="300" Margin="65,264,749,188" />
+
+                    <Label Content="Строка"  Margin="65,92,559,229" />
+
+                    <TextBox Name="toul_string" Width="500" Margin="65,147,549,285"/>
+                    <TextBox Name="toul_result" IsReadOnly="True" Width="500" Margin="65,331,549,102"/>
+
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="trim">
+                <Grid>
+                    <Button x:Name="trim" Content="Получить результат"  Click="trim_Click"  Height="40" Width="300" Margin="46,226,768,226" />
+
+                    <Label Content="Исходная строка"  Margin="46,26,578,295" />
+                    <Label Content="Удаляемые символы"  Margin="360,26,264,295" />
+
+                    <TextBox Name="trim_string" Width="260" Margin="46,112,808,320"/>
+                    <TextBox Name="trim_char" Width="260" Margin="388,112,466,320"/>
+                    <TextBox Name="trim_result" IsReadOnly="True" Margin="46,326,768,106"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
